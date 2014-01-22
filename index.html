@@ -1,0 +1,171 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+body {
+  font-family: 'Helvetica';
+  letter-spacing:-5px;
+  background:#000;
+  background-size:100%;
+  color:#fff;
+  margin:0;
+  padding:0;
+  font-weight:bold;
+}
+
+h1, h2, h3, p {
+  margin:0;
+}
+
+em, a {
+  font-style:normal;
+  color:#8dbd0c;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  width:100%;
+}
+
+div {
+  cursor:pointer;
+  cursor:hand;
+  position:absolute;
+  top:0;
+  left:0;
+}
+</style><script type='text/javascript'>
+window.onload = function() {
+    var s = document.getElementsByTagName('div'), cur = 0;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n];
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    document.onclick = function() {
+        go(++cur % (s.length));
+    };
+    document.onkeydown = function(e) {
+        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
+        (e.which === 37) && go(Math.max(0, --cur));
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    }
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+
+    go(cur);
+};
+</script></head><body>
+<div><img src='glitchart2.jpeg' /></div>
+<div>Glitch Art's <em>Rhetorike</em>:</div>
+<div><img src='glitchart.jpeg' /></div>
+<div><em>Human</em>|<em>Object</em> Relations as <em>Rhetorical</em>|<em>Digital</em> Craft</div>
+<div>What do I mean by this?</div>
+<div>I mean: <em>some glitch artists are rhetorical</em></div>
+<div>their craft/techne/<em>glitch art</em> reveals <em>the digital medium</em></div>
+<div>as a call for us to establish a deeper relationship w/ <em>the digital medium</em></div>
+<div>But. This must be done through <em>doing</em> glitch art, not just <em>experiencing</em> the output of glitch art.</div>
+<div>(1)<em>Hacking</em> source code texts, (2)<em>Revealing</em> procedural claims in such texts, (3)<em>Experiencing</em> such glitches</div>
+<div>This is their <em>Rhetorike</em>.</div>
+<div>Looking @ Nick Briz's <em>Glitch Codec Tutorial</em></div>
+<div><a href='http://nickbriz.com/glitchcodectutorial/' target='_blank'><img src='briz-codec.jpeg' /></a></div>
+<div>Operates rhetorically on 2 levels:</div>
+<div>(1)<em>Epideictic Text(s)</em> & (2)<em>Alter Ontological Position/Perception</em></div>
+<div>Focusing on (2)<em>Ontological Position/Perception</em></div>
+<div>mainClaim: Through Briz's craft, he attempts to persuade others to engage in such a craft as well to "establish a relationship with the digital medium"</div>
+<div>WHY?</div>
+<div>For Briz: To reveal the politics coded into the digital medium</div>
+<div>To take part in this rhetorical argument, you must respond to Briz via hacking and re-writing source code texts. One must become or have qualities of the glitch artist.</div>
+<div>So, what is <a href='https://www.google.com/search?client=ubuntu&channel=fs&q=glitch+art&oe=utf-8&um=1&ie=UTF-8&hl=en&tbm=isch&source=og&sa=N&tab=wi&authuser=0&ei=q8AwUcmrCbPyyAHA9ICYBA&biw=1317&bih=638&sei=rsAwUYCgOuPhyQH72ID4Dw' target='_blank'>glitch art</a>?</div>
+<div>_____</div>
+<div>Broadly speaking: it's "<em>destructive generativity</em>" (Menkman, Glitch Manifesto, 2010) with a focus on the breaking of "procedural flows"</div>
+<div>"The glitch is a powerful interruption that shifts an object away from its flow and ordinary discourse, towards the ruins of destructed meaning. This concept of flow I emphasize as both a trait within the machine as well as a feature of society as a whole." (Menkman, The Glitch Moment(um) 2011, 29)</div>
+<div>Emphasis on processes and craft/techne, or how the means /are/ the end, the aim, the goal.</div>
+<div>Use of digital materials. Some break hardware through circuitbending; many hack source code texts in a process called <em>databending</em>.</div>
+<div>Briz, in particular, uses glitch art to also <em>expose the politics coded into the digital medium</em>.</div>
+<div>Let's do an example. Glitch Art -- Databending 101</div>
+<div>That's with image files. We're looking at video files.</div>
+<div>Example output: Briz's "A New Ecology for a Citizen of the Digital Age"</div>
+<div><span style="margin-left: 10%;"><iframe width="960" height="720" src="http://www.youtube.com/embed/JLmEpBvgAvM" frameborder="0" allowfullscreen></iframe></span></div>
+<div>Briz frames his work through a Media Studies lens: McLuhan.</div>
+<div>Also, through Heidegger's "enframing" to reveal the relationship between the human and tool.</div>
+<div>Specifically, Briz reveals the <em>procedural claims</em> operating via the digital medium</div>
+<div>Programs make claims about how both person and machine should operate in a given context.</div>
+<div> Lawrence Lessig argues "code is law" (1999); a form of "social control"</div>
+<div>Wendy Chun extends the reach of Lessig's claims: Software is code, code is law, but code is also "executable" (2008).</div>
+<div>For Chun: Code automatically gives/takes away human/machine operations.</div>
+<div>In Rhet/Comp: Selfe & Selfe's application of Pratt's "contact zones" in "Politics of the Interface"</div>
+<div>Briz claims that <em>doing</em> glitch art reveals the "laws" of the digital environment</div>
+<div>McLuhan calls this the production of the "anti-environment"</div>
+<div>Briz's <em>Glitch Codec Tutorial</em> creates this "anti-environment" writes new..,</div>
+<div>laws</div>
+<div>definitions of space and place</div>
+<div>via the crafting and execution of a new digital environment to inhabit and understand and perceive in a new way</div>
+<div>A fish out of water, crafts a new pond</div>
+<div>But what are the politics of <em>video codecs</em>?</div>
+<div>video codecs: code/encode video files via compression algorithms</div>
+<div>Patents on video codecs: Apple's H.264 vs. Google's WebM</div>
+<div>Briz's tutorial hacks/glitches the FFMPEG video codec library</div>
+<div>Depending on your location, this is <em>illegal</em></div>
+<div>From the onset, a new glitch artist is embodying themselves in this rhetorical situation, as they craft this video codec library.</div>
+<div>They re-write the environment, where the source code text becomes the "contact zone"</div>
+<div>New procedural claims are constructed through the destruction of the original text.</div>
+<div>New laws, new executables.</div>
+<div><ul><li>Create new linux distribution</li><li>Create new FFMPEG library</li><li>a new environment</li></ul></div>
+<div>What is Briz's <em>Rhetorike</em>?</div>
+<div>Rhetorical arguments are made via source code executed as software environments and operations.</div>
+<div>To become a glitch artist is to alter one's role in this situation.</div>
+<div>Through this craft, one alters their ontological position from user to creator</div>
+<div>This change alters one's understanding and relationship with the digital medium</div>
+<div>Craft becomes central to Briz's rhetorical success, as well as necessary to take part in this discourse.</div>
+<div>Thank you!</div>
+        
+<!-- Start Open Web Analytics Tracker -->
+<script type="text/javascript">
+  //<![CDATA[
+  var owa_baseUrl = 'http://clindgrencv.com/owa/';
+  var owa_cmds = owa_cmds || [];
+  owa_cmds.push(['setSiteId', '6f716e805a3ca4751f02607c131e9e4f']);
+  owa_cmds.push(['trackPageView']);
+  owa_cmds.push(['trackClicks']);
+  owa_cmds.push(['trackDomStream']);
+
+  (function() {
+    var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+    owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+    _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+    var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+  }());
+  //]]>
+</script>
+<!-- End Open Web Analytics Code -->
+</body>
+</html>
